@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Admin</h1>
+
+    <h2>Teams</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Název</th>
+                <th>Hledá komplice?</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for team in teams %}
+        <tr>
+            <td>{{team.name}}</td>
+            <td>{{team.isLookingForPlayers ? 'Ano' : 'Ne' }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+    <h2>Players</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Jméno</th>
+                <th>Příjmení</th>
+                <th>Email</th>
+                <th>Tým</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for player in players %}
+        <tr>
+            <td>{{player.name}}</td>
+            <td>{{player.surname}}</td>
+            <td>{{player.email}}</td>
+            <td>{{player.team.name}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}
