@@ -61,7 +61,8 @@
         "symfony": {
             "allow-contrib": false,
             "require": "6.3.*"
-        }
+        },
+        "public-dir": "."
     },
     "require-dev": {
         "symfony/maker-bundle": "^1.50"
