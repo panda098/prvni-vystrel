@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Pravidla from "./Pravidla";
-import Registrace from "./Registrace";
+import Rules from "./Rules";
+import Registration from "./Registration";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,11 +13,11 @@ const router = createBrowserRouter([
   },
   {
     path: "pravidla",
-    element: <Pravidla />,
+    element: <Rules />,
   },
   {
     path: "registrace",
-    element: <Registrace />,
+    element: <Registration />,
   },
 ]);
 
