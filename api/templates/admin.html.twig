@@ -16,6 +16,7 @@
     <table id="teams">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Název</th>
                 <th>Hledá komplice?</th>
             </tr>
@@ -23,6 +24,7 @@
         <tbody>
     {% for team in teams %}
         <tr>
+            <td>{{team.id}}</td>
             <td>{{team.name}}</td>
             <td>{{team.isLookingForPlayers ? 'Ano' : 'Ne' }}</td>
         </tr>
@@ -37,7 +39,8 @@
                 <th>Jméno</th>
                 <th>Příjmení</th>
                 <th>Email</th>
-                <th>Tým</th>
+                <th>Tým - Id</th>
+                <th>Tým - Název</th>
             </tr>
         </thead>
         <tbody>
@@ -46,6 +49,7 @@
             <td>{{player.name}}</td>
             <td>{{player.surname}}</td>
             <td>{{player.email}}</td>
+            <td>{{player.team.id}}</td>
             <td>{{player.team.name}}</td>
         </tr>
     {% endfor %}
