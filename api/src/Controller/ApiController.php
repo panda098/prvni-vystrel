@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ApiController extends AbstractController
@@ -18,6 +19,11 @@ class ApiController extends AbstractController
     {
         
         $content = json_decode($request->getContent());
+
+        if(is_null($content) || !property_exists($content, 'teamName') || !property_exists($content, 'isLookingForPlayers') 
+            || !property_exists($content, 'players') || !is_array($content->players) ) {
+            throw new BadRequestHttpException();
+        }
 
         $team = (new Team())
             ->setName($content->teamName)
@@ -42,8 +48,7 @@ class ApiController extends AbstractController
         $em->flush();
         
         return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/ApiController.php',
+            'status' => 200
         ]);
     }
 
