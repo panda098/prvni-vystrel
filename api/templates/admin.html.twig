@@ -1,10 +1,19 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.5.2/css/tabulator.min.css" integrity="sha512-HdUIebGeOK7s+At/fOnnbX8vsz6Cl1KTeiRlBiQABTMSqw7kZRCxGiUnuF9lr+1xz5y8pL7jkCR+NNtVVkEqKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.5.2/js/tabulator.min.js" integrity="sha512-oU2NOn7vXb9igwNelYL+57+t+zb3liitNE8/NXg8QFJhBCSvH+dt9+s3H02aM41FUF7WYWx0kPeFV5yIkm1MVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
 {% block body %}
     <h1>Admin</h1>
 
     <h2>Teams</h2>
-    <table>
+    <table id="teams">
         <thead>
             <tr>
                 <th>Název</th>
@@ -22,7 +31,7 @@
     </table>
 
     <h2>Players</h2>
-    <table>
+    <table id="players">
         <thead>
             <tr>
                 <th>Jméno</th>
@@ -42,4 +51,9 @@
     {% endfor %}
     </tbody>
     </table>
+
+    <script>
+        const tableTeams = new Tabulator('#teams', {})
+        const tablePlayers = new Tabulator('#players', {})
+    </script>
 {% endblock %}
