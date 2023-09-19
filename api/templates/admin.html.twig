@@ -7,6 +7,7 @@
 {% block javascripts %}
     {{ parent() }}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.5.2/js/tabulator.min.js" integrity="sha512-oU2NOn7vXb9igwNelYL+57+t+zb3liitNE8/NXg8QFJhBCSvH+dt9+s3H02aM41FUF7WYWx0kPeFV5yIkm1MVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -31,6 +32,9 @@
     {% endfor %}
     </tbody>
     </table>
+    <div style="margin-top:10px;">
+        <button id="teams-download-csv">CSV</button>
+    </div>
 
     <h2>Players</h2>
     <table id="players">
@@ -55,9 +59,20 @@
     {% endfor %}
     </tbody>
     </table>
+    <div style="margin-top:10px;">
+        <button id="players-download-csv">CSV</button>
+    </div>
 
     <script>
         const tableTeams = new Tabulator('#teams', {})
         const tablePlayers = new Tabulator('#players', {})
+
+        document.getElementById("teams-download-csv").addEventListener("click", function(){
+            tableTeams.download("csv", "data.csv");
+        });
+
+        document.getElementById("players-download-csv").addEventListener("click", function(){
+            tablePlayers.download("csv", "data.csv");
+        });
     </script>
 {% endblock %}
