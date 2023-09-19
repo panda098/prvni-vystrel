@@ -20,7 +20,7 @@ class ApiController extends AbstractController
         $content = json_decode($request->getContent());
 
         $team = (new Team())
-            ->setName($$content->teamName)
+            ->setName($content->teamName)
             ->setIsLookingForPlayers($content->isLookingForPlayers);
 
         $em->persist($team);
