@@ -1,6 +1,6 @@
 import leftHandIcon from './images/hand_left_transparent.png'
 
-function Pravidla() {
+export default function Rules() {
   return (
     <div>
       <div className="container" id='pravidla'>
@@ -70,5 +70,3 @@ function Pravidla() {
     </div>
   );
 }
-
-export default Pravidla;

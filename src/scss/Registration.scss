@@ -1,6 +1,7 @@
 .players-row {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .players-container {
@@ -15,10 +16,6 @@
 
 .players-input {
   margin-bottom: 10px;
-}
-
-.head {
-  width: 50px;
 }
 
 .head-container--multi {

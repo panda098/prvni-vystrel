@@ -1,10 +1,61 @@
+import "./scss/input.scss";
 import "./scss/Registration.scss";
-import head from "./images/head.png";
 
 import { useState } from "react";
+import PlayerForm from "./PlayerForm";
+import PlayerHead from "./PlayerHead";
 
-function Registrace() {
+let playerTemplate = {
+  name: "",
+  surname: "",
+  email: "",
+};
+
+export default function Registration() {
   const [isSinglePlayer, setIsSinglePlayer] = useState(null);
+  const [teamName, setTeamName] = useState("");
+  const [captain, setCaptain] = useState(playerTemplate);
+  const [teamPlayers, setTeamPlayers] = useState([playerTemplate]);
+  const [isLookingForPlayers, setIsLookingForPlayers] = useState(false);
+
+  function handleTeamPlayerChange(player) {
+    const newState = teamPlayers.slice();
+    newState[player.id] = player;
+    setTeamPlayers(newState);
+  }
+
+  function addTeamPlayer() {
+    const newState = teamPlayers.slice();
+    newState.push(playerTemplate);
+    setTeamPlayers(newState);
+  }
+
+  function deleteTeamPlayer(i) {
+    const copy = teamPlayers.slice();
+    copy.splice(i, 1);
+    setTeamPlayers(copy);
+  }
+
+  function submit() {
+    let team = [
+      {
+        name: captain.name,
+        surname: captain.surname,
+        email: captain.email,
+      },
+    ];
+
+    if (!isSinglePlayer) {
+      team.push(...teamPlayers);
+    }
+
+    const postBody = {
+      teamName: teamName,
+      isLookingForPlayers: isLookingForPlayers,
+      players: team,
+    };
+    console.log(postBody);
+  }
 
   return (
     <div id="pravidla">
@@ -29,10 +80,11 @@ function Registrace() {
                 name="players"
                 value="single"
                 checked={isSinglePlayer}
+                readOnly={true}
               />
-              <label for="single">Jsem sám</label>
+              <label htmlFor="single">Jsem sám</label>
             </div>
-            <img className="head" src={head} />
+            <PlayerHead />
           </div>
 
           <div
@@ -49,19 +101,88 @@ function Registrace() {
                 name="players"
                 value="multi"
                 checked={isSinglePlayer === false}
+                readOnly={true}
               />
-              <label for="multi">Je nás víc</label>
+              <label htmlFor="multi">Je nás víc</label>
             </div>
             <div className="head-container--multi">
-              <img className="head" src={head} />
-              <img className="head" src={head} />
-              <img className="head" src={head} />
+              <PlayerHead />
+              <PlayerHead />
+              <PlayerHead />
             </div>
           </div>
         </div>
+
+        {isSinglePlayer !== null && (
+          <div className="input-container">
+            <label htmlFor="teamName">Název týmu</label>
+            <input
+              className="input-text"
+              type="text"
+              id="teamName"
+              value={teamName}
+              onChange={(e) => setTeamName(e.target.value)}
+            />
+          </div>
+        )}
+
+        {isSinglePlayer !== null && (
+          <div>
+            <PlayerForm
+              player={captain}
+              handleChange={setCaptain}
+              showEmail={true}
+            />
+          </div>
+        )}
+
+        {isSinglePlayer === false && (
+          <div>
+            {teamPlayers.map((player, i) => (
+              <>
+                <p>
+                  {i + 1}. komplic{" "}
+                  {teamPlayers.length > 1 && (
+                    <button on onClick={() => deleteTeamPlayer(i)}>
+                      X
+                    </button>
+                  )}
+                </p>
+                <PlayerForm
+                  key={i}
+                  player={{ ...player, id: i }}
+                  handleChange={handleTeamPlayerChange}
+                />
+              </>
+            ))}
+          </div>
+        )}
+
+        {isSinglePlayer === false && teamPlayers.length < 4 && (
+          <div>
+            <button onClick={() => addTeamPlayer()}>+ Přidat komplice</button>
+          </div>
+        )}
+
+        {isSinglePlayer !== null && teamPlayers.length < 4 && (
+          <div>
+            <p>Hledáš komplice? Stačí říct, zbytek zařídíme.</p>
+            <input
+              type="checkbox"
+              id="isLookingForPlayers"
+              checked={isLookingForPlayers}
+              onChange={(e) => setIsLookingForPlayers(e.target.checked)}
+            />
+            <label htmlFor="isLookingForPlayers">Ano, chci komplice!</label>
+          </div>
+        )}
+
+        {isSinglePlayer !== null && (
+          <div>
+            <button onClick={() => submit()}>Registrovat</button>
+          </div>
+        )}
       </div>
     </div>
   );
 }
-
-export default Registrace;
