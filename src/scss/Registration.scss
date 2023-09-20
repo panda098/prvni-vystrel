@@ -1,7 +1,21 @@
+@import "./breakpoints.scss";
+
+#registrace {
+  min-height: 100vh;
+
+  @include lg {
+    padding-bottom: 300px;
+  }
+}
+
 .players-row {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+
+  @include lg {
+    padding-top: 50px;
+  }
 }
 
 .players-container {

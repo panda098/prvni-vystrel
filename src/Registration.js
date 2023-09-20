@@ -78,7 +78,7 @@ export default function Registration() {
   }
 
   return (
-    <div id="pravidla">
+    <div id="registrace">
       <div className="container">
         <h1 className="title text-center">
           <a href="/">První výstřel</a>
@@ -210,6 +210,7 @@ export default function Registration() {
           </div>
         )}
       </div>
+      <div className="page-footer"></div>
     </div>
   );
 }
