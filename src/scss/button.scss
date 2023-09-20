@@ -1,0 +1,19 @@
+.button {
+  color: white;
+  background-color: black;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Wellfleet";
+  padding: 10px;
+  line-height: 20px;
+
+  &.tiny {
+    height: 25px;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 5px;
+  }
+}

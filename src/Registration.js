@@ -159,12 +159,15 @@ export default function Registration() {
         {isSinglePlayer === false && (
           <div>
             {teamPlayers.map((player, i) => (
-              <>
+              <div style={{ marginBottom: 10 }}>
                 <p>
                   {i + 1}. komplic{" "}
                   {teamPlayers.length > 1 && (
-                    <button on onClick={() => deleteTeamPlayer(i)}>
-                      X
+                    <button
+                      className="button tiny"
+                      onClick={() => deleteTeamPlayer(i)}
+                    >
+                      - odebrat
                     </button>
                   )}
                 </p>
@@ -173,19 +176,21 @@ export default function Registration() {
                   player={{ ...player, id: i }}
                   handleChange={handleTeamPlayerChange}
                 />
-              </>
+              </div>
             ))}
           </div>
         )}
 
         {isSinglePlayer === false && teamPlayers.length < 4 && (
           <div>
-            <button onClick={() => addTeamPlayer()}>+ Přidat komplice</button>
+            <button className="button tiny" onClick={() => addTeamPlayer()}>
+              + přidat komplice
+            </button>
           </div>
         )}
 
         {isSinglePlayer !== null && teamPlayers.length < 4 && (
-          <div>
+          <div className="text-center" style={{ marginBottom: 20 }}>
             <p>Hledáš komplice? Stačí říct, zbytek zařídíme.</p>
             <input
               type="checkbox"
@@ -198,8 +203,10 @@ export default function Registration() {
         )}
 
         {isSinglePlayer !== null && (
-          <div>
-            <button onClick={() => submit()}>Registrovat</button>
+          <div className="text-center">
+            <button className="button" onClick={() => submit()}>
+              Registrovat
+            </button>
           </div>
         )}
       </div>
