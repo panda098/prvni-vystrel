@@ -1,3 +1,5 @@
+import leftHandIcon from './images/hand_left_transparent.png'
+
 function Pravidla() {
   return (
     <div>
@@ -62,7 +64,7 @@ function Pravidla() {
         <li>doporučujeme celodenní jízdenku na MHD</li>
       </ul>
 
-      <a className="link link--hand" href='/'><img className="hand" src="/hand_left_transparent.png" alt="zpět na homepage"/>zpátky</a>
+      <a className="link link--hand" href='/'><img className="hand" src={leftHandIcon} alt="zpět na homepage"/>zpátky</a>
       </div>
       <div className="page-footer"></div>
     </div>
