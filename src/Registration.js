@@ -36,7 +36,7 @@ export default function Registration() {
     setTeamPlayers(copy);
   }
 
-  function submit() {
+  async function submit() {
     let team = [
       {
         name: captain.name,
@@ -54,7 +54,27 @@ export default function Registration() {
       isLookingForPlayers: isLookingForPlayers,
       players: team,
     };
-    console.log(postBody);
+
+    try {
+      const response = await fetch("http://api-prvni-vystrel.podsveti.cz/api", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postBody),
+      });
+
+      const result = await response.json();
+
+      if (result.status === 200) {
+        alert("Děkujeme za registraci. Brzy se Ti ozveme.");
+        window.location.href = "http://prvni-vystrel.podsveti.cz/";
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Došlo k chybě :-( Prosím, opakujte akci.");
+      window.location.href = "http://prvni-vystrel.podsveti.cz/registrace";
+    }
   }
 
   return (
