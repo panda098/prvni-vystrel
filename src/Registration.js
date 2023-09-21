@@ -85,7 +85,9 @@ export default function Registration() {
       const result = await response.json();
 
       if (result.status === 200) {
-        alert("Děkujeme za registraci. Brzy se Ti ozveme.");
+        alert(
+          `Děkujeme za registraci. Tebe i tvůj tým ${teamName} čeká dlouhá cesta, pokud se máte stát mafiány. Kde být a co dělat Ti dáme vědět. Víme, kde Tě máme hledat! (${captain.email})`
+        );
         window.location.href = "http://prvni-vystrel.podsveti.cz/";
       }
     } catch (error) {
