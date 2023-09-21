@@ -88,12 +88,12 @@ export default function Registration() {
         alert(
           `Děkujeme za registraci. Tebe i tvůj tým ${teamName} čeká dlouhá cesta, pokud se máte stát mafiány. Kde být a co dělat Ti dáme vědět. Víme, kde Tě máme hledat! (${captain.email})`
         );
-        window.location.href = "http://prvni-vystrel.podsveti.cz/";
+        window.location.href = "http://prvnivystrel.podsveti.cz/";
       }
     } catch (error) {
       console.error("Error:", error);
       alert("Došlo k chybě :-( Prosím, opakujte akci.");
-      window.location.href = "http://prvni-vystrel.podsveti.cz/registrace";
+      window.location.href = "http://prvnivystrel.podsveti.cz/registrace";
     }
   }
 
