@@ -36,7 +36,25 @@ export default function Registration() {
     setTeamPlayers(copy);
   }
 
+  function validateForm() {
+    const inputs = document.querySelectorAll(".js-input");
+
+    return Array.from(inputs).every((input) => {
+      if (!input.checkValidity()) {
+        input.reportValidity();
+
+        return false;
+      }
+
+      return true;
+    });
+  }
+
   async function submit() {
+    if (!validateForm()) {
+      return;
+    }
+
     let team = [
       {
         name: captain.name,
@@ -137,8 +155,9 @@ export default function Registration() {
           <div className="input-container">
             <label htmlFor="teamName">Název týmu</label>
             <input
-              className="input-text"
+              className="input-text js-input"
               type="text"
+              required
               id="teamName"
               value={teamName}
               onChange={(e) => setTeamName(e.target.value)}
