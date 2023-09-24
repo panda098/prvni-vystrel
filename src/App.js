@@ -7,6 +7,7 @@ function App() {
       <div className="container">
         <div className="homepage-content">
           <h1 className="title text-center">První výstřel</h1>
+          <p style={{ marginTop: 0 }}>21. 10. 2023</p>
           <nav>
             <Link className="nav-item" to="pravidla">
               Pravidla

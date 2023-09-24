@@ -1,4 +1,4 @@
-@import './breakpoints.scss';
+@import "./breakpoints.scss";
 
 #homepage {
   height: 100vh;
@@ -22,13 +22,17 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 40px;
 }
 
 .nav-item {
+  font-size: 30px;
   color: white;
   text-decoration: none;
   margin-bottom: 10px;
+
+  @include lg {
+    font-size: 40px;
+  }
 }
 
 .bg {
