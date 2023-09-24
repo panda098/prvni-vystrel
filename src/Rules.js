@@ -17,8 +17,8 @@ export default function Rules() {
           otevírá brány nováčkům, kteří se osvědčí.
         </p>
         <p>
-          Tebe a tvé komplice kontaktoval starý známý s nabídkou, které se
-          neodmítá. Dostali jste jedinečnou šanci připojit se do prestižní
+          Tebe a tvé komplice kontaktoval starý známý s nabídkou, která se
+          neodmítá. Dostali jste jedinečnou šanci vstoupit do prestižní
           organizace, která může změnit váš život. Ale nejdřív musíte dokázat,
           že na to máte...
         </p>
