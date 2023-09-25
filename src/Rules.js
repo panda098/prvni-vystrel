@@ -1,4 +1,5 @@
 import leftHandIcon from "./images/hand_left_transparent.png";
+import Link from "./Link";
 
 export default function Rules() {
   return (
@@ -40,9 +41,9 @@ export default function Rules() {
 
         <h3>Pro koho hra je?</h3>
         <p>
-          Akce se mohou účastnit jednotlivci, nebo týmy o 2 až 5 hráčích.
-          (Doporučujeme absolvovat trasu ve více lidech, ale pokud jsi vlk
-          samotář, můžeš jít i sám.)
+          Hru doporučujeme absolvovat v týmu o 2 až 5 členech, ale pokud jsi vlk
+          samotář, můžeš jít i sám. Pokud tě trápí nedostatek kompliců, kteří by
+          s Tebou šli, uveď to v registraci a my už se o vše postaráme.
         </p>
 
         <h3>Jaký je princip hry?</h3>
@@ -91,7 +92,10 @@ export default function Rules() {
         <p>
           Registrace právě běží a poběží do čtvrtka 19. 10. 2023 do 23 hodin a
           59 minut. Případné změny v registraci prosím pište na e-mail{" "}
-          <a href="mailto:mafie@podsveti.cz?subject=První výstřel">
+          <a
+            className="link"
+            href="mailto:mafie@podsveti.cz?subject=První výstřel"
+          >
             mafie@podsveti.cz
           </a>
           . Počet týmů je omezen, tak s registrací neotálejte!
@@ -119,55 +123,79 @@ export default function Rules() {
             nainstalovaná Android herní aplikace (přijde e-mailem pár dní před
             hrou)
           </li>
+          <li>celodenní jízdenku na pražskou MHD</li>
         </ul>
         <h4>Dále doporučujeme:</h4>
         <ul>
           <li>powerbanku</li>
           <li>stažené offline mapy v telefonu</li>
-          <li>celodenní jízdenku na pražskou MHD</li>
           <li>stažený vyhledávač jízdních řádů MHD</li>
         </ul>
+
+        <h3>Kdo hru pořádá?</h3>
+        <p>
+          První výstřel pro Vás připravuje pražské{" "}
+          <Link
+            text={"Podsvětí"}
+            url={"https://www.facebook.com/mafie.praha"}
+          />
+          , autor her jako je{" "}
+          <Link text={"Mafie"} url={"https://mafie.podsveti.cz/"} /> nebo{" "}
+          <Link text={"Gangy Práglu"} url={"http://gangy2016.podsveti.cz/"} />,
+          a neratovická skupina{" "}
+          <Link text="Znáš Nera?" url="https://znasnera.webnode.cz/" />
+        </p>
 
         <h3>Máte dotazy?</h3>
         <p>Neváhejte nás kontaktovat na:</p>
         <ul style={{ marginBottom: 50 }}>
           <li>
             e-mailu{" "}
-            <a href="mailto:mafie@podsveti.cz?subject=První výstřel">
+            <a
+              className="link"
+              href="mailto:mafie@podsveti.cz?subject=První výstřel"
+            >
               mafie@podsveti.cz
             </a>
           </li>
           <li>
-            Facebooku{" "}
-            <a
-              target="_blank"
-              without
-              rel="noreferrer"
-              href="https://www.facebook.com/mafie.praha"
-            >
-              https://www.facebook.com/mafie.praha
-            </a>
+            <Link
+              text={"Facebooku"}
+              url={"https://www.facebook.com/mafie.praha"}
+            />
           </li>
           <li>
-            Discordu{" "}
-            <a
-              target="_blank"
-              without
-              rel="noreferrer"
-              href="https://discord.com/invite/Ft5dq5cS9u"
-            >
-              https://discord.com/invite/Ft5dq5cS9u
-            </a>
+            <Link
+              text={"Discordu"}
+              url={"https://discord.com/invite/Ft5dq5cS9u"}
+            />
           </li>
           <li>
-            telefonu <a href="tel:776370700">776370700</a>
+            telefonu{" "}
+            <a className="link" href="tel:776370700">
+              776370700
+            </a>
           </li>
         </ul>
 
-        <a className="link link--hand" href="/">
-          <img className="hand" src={leftHandIcon} alt="zpět na homepage" />
-          zpátky
-        </a>
+        <div>
+          <a className="link link--with-icon" href="/">
+            <img
+              className="link__icon"
+              src={leftHandIcon}
+              alt="zpět na homepage"
+            />
+            <span className="link__text">zpátky</span>
+          </a>
+          <a className="link link--with-icon" href="/registrace">
+            <span className="link__text">Registrace</span>
+            <img
+              className="link__icon rotateY-180"
+              src={leftHandIcon}
+              alt="přejít na registraci"
+            />
+          </a>
+        </div>
       </div>
       <div className="page-footer"></div>
     </div>
