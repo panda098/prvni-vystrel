@@ -43,7 +43,8 @@ export default function Rules() {
         <p>
           Hru doporučujeme absolvovat v týmu o 2 až 5 členech, ale pokud jsi vlk
           samotář, můžeš jít i sám. Pokud tě trápí nedostatek kompliců, kteří by
-          s Tebou šli, uveď to v registraci a my už se o vše postaráme.
+          s Tebou šli, uveď to v registraci a my už se o vše postaráme. Každý
+          tým by měl obsahovat alespoň jednoho člena staršího patnácti let.
         </p>
 
         <h3>Jaký je princip hry?</h3>
@@ -130,6 +131,10 @@ export default function Rules() {
           <li>powerbanku</li>
           <li>stažené offline mapy v telefonu</li>
           <li>stažený vyhledávač jízdních řádů MHD</li>
+          <li>
+            zdravý rozum - prosím, dbejte na své zdraví a při přecházení vozovky
+            či kolejí se řádně rozhlédněte
+          </li>
         </ul>
 
         <h3>Kdo hru pořádá?</h3>
