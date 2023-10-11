@@ -59,16 +59,17 @@ export default function Rules() {
         <h3>Jak bude hra probíhat?</h3>
         <p>
           Hra začíná na místě, které obdržíte pár dní před začátkem hry na
-          e-mailovou adresu, kterou jste vyplnili při registraci. (POZOR – ne
-          všechny týmy začínají na stejném místě!) Prosím, buďte na tomto místě
-          alespoň 5 minut před začátkem hry. V 10:00 zadáte do herní aplikace
-          kód z e-mailu a objeví se fotografie prvního stanoviště, které musíte
-          najít. Pokud byste nemohli poznat, o jaké místo se jedná, nezoufejte –
-          aplikace vám po určitém čase nabídne nápovědu v podobě vyznačené
-          oblasti na mapě. Na každém nalezeném stanovišti je nutné do aplikace
-          zadat šestimístný kód, který odhalí další fotografii. Kód může být
-          schovaný na vyznačeném místě, nebo k jeho získání musíte splnit určitý
-          úkol. Informace, jak získat kód na následujícím stanovišti, bude také
+          e-mailovou adresu, kterou jste vyplnili při registraci. (POZOR - ne
+          všechny týmy začínají na stejném místě!) Prosím, buďte na startu
+          alespoň 5 minut před začátkem hry. Ve vám přidělený čas (intervalový
+          start mezi 9:30-10:00) zadáte do herní aplikace kód z e-mailu a objeví
+          se fotografie prvního stanoviště, které musíte najít. Pokud byste
+          nemohli poznat, o jaké místo se jedná, nezoufejte - aplikace vám po
+          určitém čase nabídne nápovědu v podobě vyznačené oblasti na mapě. Na
+          každém nalezeném stanovišti je nutné do aplikace zadat šestimístný
+          kód, který odhalí další fotografii. Kód může být schovaný na
+          vyznačeném místě, nebo k jeho získání musíte splnit určitý úkol.
+          Informace, jak získat kód na následujícím stanovišti, bude také
           zobrazena v aplikaci. Při hledání stanoviště se smíte rozdělit, ale
           při zadávání kódu musí být na stanovišti přítomen celý tým najednou.
           Pohybovat se smíte pouze pěšky nebo za pomoci MHD. Je zakázáno radit
@@ -77,11 +78,12 @@ export default function Rules() {
 
         <h3>Kdy?</h3>
         <p>
-          Hra startuje v sobotu 21. 10. 2023 v 10:00. Na splnění všech úkolů
-          máte 8 hodin, ale většina týmů zvládne trasu rychleji. Konec nastane v
-          18:00 a pozice cíle bude zveřejněna i pro týmy, které jej ve
-          stanoveném čase nenašly. Od 18:00 následuje v cíli afterpárty a cca v
-          19:00 proběhne slavnostní vyhlášení výsledků.
+          Hra startuje v sobotu 21. 10. 2023 mezi 9:30 až 10:00 (každý tým má
+          přiřazen konkrétní čas). Na splnění všech úkolů máte 8 a půl hodiny,
+          ale většina týmů zvládne trasu rychleji. Po 8 a půl hodinách bude
+          pozice cíle zveřejněna i pro týmy, které jej ve stanoveném čase
+          nenašly. Od 18:30 následuje v cíli afterpárty a cca v 19:00 proběhne
+          slavnostní vyhlášení výsledků.
         </p>
 
         <h3>Kde?</h3>
