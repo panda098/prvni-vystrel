@@ -95,9 +95,9 @@ export default function Rules() {
           59 minut. Případné změny v registraci prosím pište na e-mail{" "}
           <a
             className="link"
-            href="mailto:mafie@podsveti.cz?subject=První výstřel"
+            href="mailto:prvnivystrel@email.cz?subject=První výstřel"
           >
-            mafie@podsveti.cz
+            prvnivystrel@email.cz
           </a>
           . Počet týmů je omezen, tak s registrací neotálejte!
         </p>
@@ -158,9 +158,9 @@ export default function Rules() {
             e-mailu{" "}
             <a
               className="link"
-              href="mailto:mafie@podsveti.cz?subject=První výstřel"
+              href="mailto:prvnivystrel@email.cz?subject=První výstřel"
             >
-              mafie@podsveti.cz
+              prvnivystrel@email.cz
             </a>
           </li>
           <li>
