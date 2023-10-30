@@ -12,9 +12,9 @@ function App() {
             <Link className="nav-item" to="pravidla">
               Pravidla
             </Link>
-            <Link className="nav-item" to="registrace">
-              Registrace
-            </Link>
+            {/* <Link className="nav-item" to="vysledky">
+              Výsledky
+            </Link> */}
           </nav>
         </div>
       </div>

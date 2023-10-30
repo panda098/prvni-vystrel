@@ -94,3 +94,19 @@ a {
 .rotateY-180 {
   transform: rotateY(180deg);
 }
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-small {
+  font-size: 15px;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
