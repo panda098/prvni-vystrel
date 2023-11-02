@@ -81,7 +81,11 @@ export default function Results() {
           ↔️ Posouvejte tažením do strany
         </p>
         <div className="overflow-x-scroll">
-          <img src={img3} alt="Výsledky - obrázek 3" />
+          <img
+            src={img3}
+            alt="Výsledky - obrázek 3"
+            style={{ maxHeight: 600 }}
+          />
         </div>
         <h3>Zpětná vazba</h3>
         <p>

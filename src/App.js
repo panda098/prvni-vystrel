@@ -15,6 +15,14 @@ function App() {
             <Link className="nav-item" to="vysledky">
               Výsledky
             </Link>
+            <a
+              className="nav-item"
+              href="https://mafie.podsveti.cz"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Další akce
+            </a>
           </nav>
         </div>
       </div>
