@@ -192,14 +192,14 @@ export default function Rules() {
               src={leftHandIcon}
               alt="zpět na homepage"
             />
-            <span className="link__text">zpátky</span>
+            <span className="link__text">Zpátky</span>
           </a>
-          <a className="link link--with-icon" href="/registrace">
-            <span className="link__text">Registrace</span>
+          <a className="link link--with-icon" href="/vysledky">
+            <span className="link__text">Výsledky</span>
             <img
               className="link__icon rotateY-180"
               src={leftHandIcon}
-              alt="přejít na registraci"
+              alt="přejít k výsledkům"
             />
           </a>
         </div>

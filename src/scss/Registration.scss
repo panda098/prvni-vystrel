@@ -2,10 +2,6 @@
 
 #registrace {
   min-height: 100vh;
-
-  @include lg {
-    padding-bottom: 300px;
-  }
 }
 
 .players-row {

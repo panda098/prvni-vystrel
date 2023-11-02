@@ -10,24 +10,48 @@ export default function Results() {
           <a href="/">První výstřel</a>
         </h1>
         <h2 className="text-center">Výsledky</h2>
+        <p>Mockrát Vám děkujeme, že jste se zúčastnili hry První výstřel!</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Ještě jednou tímto gratulujeme prvním třem týmům, kterými byly
+          Tučňáci, Next Level Team a Verča+Pája+Pája+Míša. Obrovský obdiv ale
+          nepatří pouze jim, nýbrž každému, kdo se vydal na naši trasu plnou
+          úkolů a nástrah. Všichni jste ukázali, že jste v duchu pravými
+          mafiány, a my doufáme, že Vás opět potkáme na některé z našich dalších
+          aktivit z{" "}
+          <a href="https://mafie.podsveti.cz/" target="_blank" rel="noreferrer">
+            Podsvětí
+          </a>
+          ! Ale teď už konec zdržování a pojďme se podívat na výsledky!
         </p>
-        <h3>Kokos</h3>
+        <h3>Celkové výsledky</h3>
+        <p>
+          Zdrojové tabulky jsou k dispozici na{" "}
+          <a
+            href="https://drive.google.com/drive/folders/1U1rHAGuUcQjklYsip9JuwdurljbBlUr9"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Google Drive
+          </a>
+          .
+        </p>
         <p className="mb-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Žlutě jsou značeny časy týmů, které navštívily všechna stanoviště.{" "}
+          <i>
+            (26. tým Haleluka sice nestihl dojít na poslední stanoviště v
+            časovém limitu, ale přesto na místo dorazili a opsali kód.)
+          </i>{" "}
+          V šedé barvě jsou odhady časů, ve kterých by týmy, které nedošly,
+          trasu dokončily, kdyby pokračovaly nadále stejným průměrným tempem.
+          Takový výsledný dopočítaný čas je zvýrazněn podtržením.{" "}
+          <i>
+            (Pro tým Haleluka je takto označen skutečný čas zadání posledního
+            kódu.)
+          </i>{" "}
+          Pokud jsou ve sloupci dva časové údaje (hh:mm:ss / hh:mm:ss), první je
+          čas na stanovišti v záhlaví sloupce, druhý údaj značí čas startu ze
+          startovního bodu. Sloupce označené šipkou jsou časy přesunů mezi
+          jednotlivými stanovišti udávané v minutách.
         </p>
         <p className="text-italic text-small">
           ↔️ Posouvejte tažením do strany
@@ -35,15 +59,15 @@ export default function Results() {
         <div className="overflow-x-scroll">
           <img src={img1} alt="Výsledky - obrázek 1" />
         </div>
-        <h3>Ananas</h3>
+        <h3>Rychlost přesunů</h3>
         <p className="mb-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          V této tabulce můžete detailně porovnat, jak jste si vedli v porovnání
+          s ostatními týmy. Časy přesunů jsou opět uváděny v minutách. Pod
+          tabulkou je vypočítán průměrný čas přesunu pro každou dvojici
+          stanovišť a barevně jsou odlišeny týmy, které se od tohoto průměru
+          liší, ať už byly rychlejší, nebo pomalejší. Např. světle žluté časy
+          označují přesun, který je o více než polovinu času rychlejší než
+          přesun průměrný.
         </p>
         <p className="text-italic text-small">
           ↔️ Posouvejte tažením do strany
@@ -51,22 +75,27 @@ export default function Results() {
         <div className="overflow-x-scroll">
           <img src={img2} alt="Výsledky - obrázek 2" />
         </div>
-        <h3>Ondatra</h3>
-        <p className="mb-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <h3>Statistiky</h3>
+        <p className="mb-2">Zajímavosti o trase, organizátorech a hráčích.</p>
         <p className="text-italic text-small">
           ↔️ Posouvejte tažením do strany
         </p>
         <div className="overflow-x-scroll">
           <img src={img3} alt="Výsledky - obrázek 3" />
         </div>
+        <h3>Zpětná vazba</h3>
+        <p>
+          Doufáme, že jste si hru užili a budeme Vám vděční, pokud nám
+          poskytnete zpětnou vazbu. Vyplnění{" "}
+          <a
+            href="https://forms.gle/B5pCuR3xWvmT2HjV9"
+            target="_blank"
+            rel="noreferrer"
+          >
+            formuláře
+          </a>{" "}
+          zabere maximálně 10 minut.
+        </p>
       </div>
       <div className="page-footer"></div>
     </div>
